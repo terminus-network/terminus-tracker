@@ -47,7 +47,7 @@ graph TD
     B --> C{Tracker Manager}
     C -->|Persist Task| D[(SQLite DB)]
     C -->|Spawn/Join| E[Active Poller Map]
-    E -->|Batch Request| F[Chain Adapter (EVM/TRON)]
+    E -->|Batch Request| F["Chain Adapter (EVM/TRON)"]
     F -->|RPC Call| G[Blockchain Node]
     F -->|Match Tx| H[Webhook Dispatcher]
     H -->|Callback| A
